@@ -13,7 +13,8 @@ debe de contener lo siguiente:
 3. Imagen.png mostrando el uso de Raspberry con VNC
 4. Imagen.png mostrando el uso de Raspberry con UART
 
-Pueden consultar la referencia siguiente para crear archvos markdown:
+Pueden consultar la referencia siguiente para crear archivos markdown:
 
 **Mastering Markdown**
+
 https://guides.github.com/features/mastering-markdown/
