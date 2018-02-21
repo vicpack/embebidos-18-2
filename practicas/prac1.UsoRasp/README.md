@@ -1,4 +1,4 @@
-#**Practica de uso de Raspberry**
+**Practica de uso de Raspberry**
 
 En esta carpeta deberan crear una carpeta con su numero de equipo. 
 Ejemplo: para el equipo 3 la carpera seria:
@@ -15,5 +15,5 @@ debe de contener lo siguiente:
 
 Pueden consultar la referencia siguiente para crear archvos markdown:
 
-#**Mastering Markdown**
+**Mastering Markdown**
 https://guides.github.com/features/mastering-markdown/
