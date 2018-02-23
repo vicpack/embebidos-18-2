@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
-#define MUESTRAS 512
+#include "defs.h"
 
 void guarda_datos(float seno[])
 {
