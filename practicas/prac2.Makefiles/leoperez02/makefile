@@ -1,5 +1,6 @@
 #archivo makefile
 
+# Variables generales para el makefile
 PROYECTO=muestreo
 DESTDIR=/usr/local/bin
 CFLAGS=-Wall
@@ -8,8 +9,11 @@ CC=gcc
 
 all: $(PROYECTO)
 
+# Reduccion 1
 %.o: %.c
 	$(CC) -c $< $(CFLAGS)
+
+# Remplaza a:
 #procesamiento.o: procesamiento.c
 #	$(CC) -c procesamiento.c $(CFLAGS)
 
@@ -19,13 +23,20 @@ all: $(PROYECTO)
 #muestreo.o: muestreo.c
 #	$(CC) -c muestreo.c $(CFLAGS)
 
-# fecvha de entrefa: lunes 26
-# tarea: investigar reduccion de la siguiente linea: reduccion de dependencias
-# uso de wildcard
-# enviar con ramas de practica 2 
-#equipo5
-$(PROYECTO): procesamiento.o archivos.o muestreo.o
+# TAREA
+# Uso de wildcards
+
+# Anterior
+#$(PROYECTO): procesamiento.o archivos.o muestreo.o
+
+# Simplificacion con wildcars y sustitucion de patrones:
+# Lista de todos los archivos fuente .c
+s_files = $(wildcard *.c)
+# Sustitucion de *.c por *.o en la lista de archivos fuente
+$(PROYECTO): $(s_files:.c=.o)
 	$(CC) $^ -o $@ $(LDFLAGS) 
+
+# Variables especiales $^ y $@
 #	$(CC) $^ -o $(PROYECTO) $(LDFLAGS) 
 #	$(CC) procesamiento.o archivos.o muestreo.o -o $(PROYECTO) $(LDFLAGS) 
 
@@ -38,6 +49,7 @@ install: all
 uninstall:
 	sudo rm $(DESTDIR)/$(PROYECTO)
 
+# Clean region 4
 .PHONY: barrele
 
 barrele:
