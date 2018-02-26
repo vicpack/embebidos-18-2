@@ -6,7 +6,8 @@ DESTDIR = /usr/local/bin
 CFLAGS = -Wall
 LDFLAGS = -lm
 CC = gcc
-OBJECTS = muestreo.o procesamiento.o archivos.o
+SRC = $(wildcard *.c)
+OBJECTS = $(SRC:.c=.o)
 
 all: $(PROYECTO)
 
